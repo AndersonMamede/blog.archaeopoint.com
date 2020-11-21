@@ -1,0 +1,81 @@
+---
+layout: page
+title: Contato
+permalink: /contato
+---
+
+<div class="row">
+    <div class="col-6 mx-auto">
+        <div class="h2 mb-2">Quer falar com a gente?</div>
+        <div class="text-dark">Envie sua mensagem através do formulário abaixo que responderemos o mais breve possível ;)</div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6 mt-4 mx-auto">
+        <form action="https://formspree.io/f/xrgolvjr" onsubmit="return false">
+            <input type="hidden" name="_language" value="pt-BR">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="Informe seu nome">
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" class="form-control" id="email" name="_replyto" placeholder="Informe seu endereço de e-mail">
+            </div>
+
+            <div class="form-group">
+                <label for="mensagem">Mensagem:</label>
+                <textarea class="form-control" id="mensagem" name="mensagem" rows="4" placeholder="Digite sua mensagem"></textarea>
+            </div>
+
+            <input type="submit" class="btn btn-orange" id="bt-send" value="Enviar mensagem">
+        </form>
+    </div>
+
+    <script>
+        var email_regexp = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+
+        var $bt_send = $('#bt-send');
+
+        $bt_send.click(function() {
+            var data = {
+                _language: 'pt-BR',
+                nome: $.trim($('#nome').val()),
+                email: $.trim($('#email').val()),
+                mensagem: $.trim($('#mensagem').val()),
+            };
+
+            if (!data.nome.length) {
+                alert('Por favor, informe seu nome.');
+                return $('#nome').focus();
+            } else if (!data.email.length) {
+                alert('Por favor, informe seu endereço de email.');
+                return $('#email').focus();
+            } else if (!data.email.match(email_regexp)) {
+                alert('O endereço de e-mail informado não é válido. Por favor, corrija-o e tente novamente.');
+                return $('#email').focus();
+            } else if (!data.mensagem.length) {
+                alert('Por favor, digite sua mensagem.');
+                return $('#mensagem').focus();
+            }
+
+            $bt_send.prop('disabled', true).val('Enviando mensagem, aguarde...');
+            $('#nome,#email,#mensagem').prop('disabled', true);
+
+            $.ajax({
+                url: "https://formspree.io/f/xrgolvjr",
+                method: 'POST',
+                dataType: 'json',
+                data: data,
+            })
+                .then(() => {
+                    window.location.href = '{{site.baseurl}}/mensagem-enviada';
+                })
+                .catch(() => {
+                    $bt_send.prop('disabled', false).val('Enviar mensagem');
+                    $('#nome,#email,#mensagem').prop('disabled', false);
+                    alert('Ocorreu um erro ao enviar sua mensagem. Verifique se seu endereço de e-mail está correto e tente novamente.');
+                });
+        });
+    </script>
+</div>

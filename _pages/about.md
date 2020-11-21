@@ -1,8 +1,7 @@
 ---
 layout: page
-title: Mediumish Template for Jekyll
-permalink: /about
-comments: true
+title: Sobre o Artpoint
+permalink: /sobre
 ---
 
 <div class="row justify-content-between">
