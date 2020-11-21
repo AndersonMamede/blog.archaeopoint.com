@@ -16,7 +16,7 @@ var documents = [{
     "body": ""
     }, {
     "id": 3,
-    "url": "/contato",
+    "url": "/contato/",
     "title": "Contato",
     "body": "      Quer falar com a gente?    Envie sua mensagem através do formulário abaixo que responderemos o mais breve possível ;)                            Nome:                            E-mail:                            Mensagem:                            "
     }, {
