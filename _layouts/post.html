@@ -116,17 +116,19 @@ post_class: post-template
             <!-- End Categories -->
 
             <!-- Post Tags -->
-            <div class="after-post-tags">
-                <ul class="tags">
-                    <div class="mb-1">Tag(s):</div>
-                    {% assign sortedTags = page.tags | sort %}
-                    {% for tag in sortedTags %}
-                    <li>
-                        <a class="smoothscroll" href="{{site.baseurl}}/tags#{{ tag | replace: " ","-" }}">#{{ tag }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
+            {% if page.tags.size > 0 %}
+                <div class="after-post-tags">
+                    <ul class="tags">
+                        <div class="mb-1">Tag(s):</div>
+                        {% assign sortedTags = page.tags | sort %}
+                        {% for tag in sortedTags %}
+                        <li>
+                            <a class="smoothscroll" href="{{site.baseurl}}/tags#{{ tag | replace: " ","-" }}">#{{ tag }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
             <!-- End Tags -->
 
             <!-- Prev/Next -->
