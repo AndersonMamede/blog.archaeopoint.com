@@ -506,15 +506,16 @@ ul.tags li {
 }
 
 ul.tags li a {
-    background: rgba(0, 0, 0, .05);
-    color: rgba(0, 0, 0, .6);
+    background: var(--orange);
+    color: #FFF;
     border-radius: 3px;
     padding: 5px 10px;
 }
 
 ul.tags li a:hover {
-    background: rgba(0, 0, 0, .07);
+    background: #d46102;
     text-decoration: none;
+    color: #FFF;
 }
 
 .margtop3rem {
