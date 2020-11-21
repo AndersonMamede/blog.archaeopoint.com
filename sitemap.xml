@@ -61,10 +61,10 @@
 <lastmod>2020-11-20T19:26:27+00:00</lastmod>
 </url>
 <url>
-<loc>/sobre</loc>
+<loc>/sobre/</loc>
 </url>
 <url>
-<loc>/categorias</loc>
+<loc>/categorias/</loc>
 </url>
 <url>
 <loc>/contato/</loc>
@@ -73,10 +73,10 @@
 <loc>/</loc>
 </url>
 <url>
-<loc>/contato/mensagem-enviada</loc>
+<loc>/contato/mensagem-enviada/</loc>
 </url>
 <url>
-<loc>/tags</loc>
+<loc>/tags/</loc>
 </url>
 <url>
 <loc>/categoria/jekyll/</loc>
