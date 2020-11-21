@@ -43,6 +43,15 @@
 <body class="layout-post">
     
 
+    <div id="fb-root"></div>
+<script
+    async
+    defer
+    crossorigin="anonymous"
+    src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v9.0&appId=572699796223482&autoLogAppEvents=1"
+    nonce="kTKSJhHR"
+></script>
+
 
 	<!-- defer loading of font and font awesome -->
 	<noscript id="deferred-styles">
@@ -88,7 +97,7 @@
                 </li>
 
                 <li class="nav-item">
-                <a class="nav-link" href="https://www.instagram.com/joao.artpoint/">Instagram</a>
+                <a class="nav-link" href="https://www.instagram.com/joao.artpoint/" target="_blank">Instagram</a>
                 </li>
 
                 <li class="nav-item">
@@ -139,10 +148,30 @@
 <!-- Site Title
 ================================================== -->
 <div class="mainheading">
-    <h1 class="sitetitle">Artpoint blog</h1>
-    <p class="lead">
-        Sobre Arte e História
-    </p>
+    <div class="row">
+        <div class="col-md-6">
+            <h1 class="sitetitle">Artpoint blog</h1>
+            <p class="lead">
+                Sobre Arte e História
+            </p>
+        </div>
+        <div class="col-md-6 text-right">
+            <div
+    class="fb-page"
+    aria-label="Caixa de curtir a página no Facebook"
+    data-href="https://www.facebook.com/artpointapp/"
+    data-tabs="timeline"
+    data-width="270"
+    data-height="70"
+    data-small-header="true"
+    data-adapt-container-width="true"
+    data-hide-cover="true"
+    data-show-facepile="true"
+    data-lazy="true"
+></div>
+
+        </div>
+    </div>
 </div>
 
 <!-- Content
@@ -349,7 +378,7 @@ https://search.google.com/structured-data/testing-tool/u/0/
 	<div class="d-md-flex h-100">
 		<div class="col-md-4 transpdark align-self-center text-center h-100">
             <div class="d-md-flex align-items-center justify-content-center h-100">
-                <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span></h2>
+                <h2 class="d-md-block align-self-center py-1 font-weight-light">Explorar <span class="d-none d-md-inline">→</span></h2>
             </div>
 		</div>
 		<div class="col-md-8 p-5 align-self-center text-center">
@@ -375,13 +404,10 @@ https://search.google.com/structured-data/testing-tool/u/0/
 <!-- Begin Footer
 ================================================== -->
 <footer class="footer">
-    <div class="container">
+    <div class="container pt-2">
         <div class="row">
-            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+            <div class="col text-center text-center">
                 Copyright © 2020 Artpoint blog 
-            </div>
-            <div class="col-md-6 col-sm-6 text-center text-lg-right">    
-                <a target="_blank" href="https://www.wowthemes.net/mediumish-free-jekyll-template/">Mediumish Jekyll Theme</a> by WowThemes.net
             </div>
         </div>
     </div>

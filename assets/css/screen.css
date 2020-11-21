@@ -1,4 +1,8 @@
-/* 
+html {
+    --orange: #f5904b;
+}
+
+/*
 Template Name: Mediumish 
 Copyright: Sal, WowThemes.net, https://www.wowthemes.net 
 License: https://www.wowthemes.net/freebies-license/ 
@@ -306,7 +310,7 @@ span.post-read-more a:hover {
 
 .mainheading h1.sitetitle {
     font-family: Righteous;
-    color: #FF9800;
+    color: var(--orange);
 }
 
 .mainheading h1.posttitle {
@@ -805,11 +809,11 @@ iframe {
 
 .jumbotron.fortags a {
     padding: 5px 10px 7px;
-    background: #222;
+    background: var(--orange);
     border-radius: 30px;
     color: #fff;
     font-weight: 500;
-    text-transform: lowercase;
+    /*text-transform: lowercase;*/
     font-size: 0.8rem;
     display: inline-block;
 }
@@ -914,6 +918,6 @@ iframe {
 }
 
 .btn-orange {
-    background: #FF9800;
+    background: var(--orange);
     color: #FFF;
 }
