@@ -33,7 +33,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-archives
-    
+
 # Archives
 jekyll-archives:
   enabled:
@@ -44,8 +44,8 @@ jekyll-archives:
     
 # Pagination 
 paginate: 6
-paginate_path: /pagina:num/
-    
+paginate_path: /pagina/:num/
+
 # Other
 markdown: kramdown
 
