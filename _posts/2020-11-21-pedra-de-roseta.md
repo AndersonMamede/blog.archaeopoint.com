@@ -2,7 +2,7 @@
 layout: post
 title: "Pedra de Roseta - 5 minutos de História"
 author: joao
-cover: assets/images/capa-video-pedra-de-roseta.jpg
+image: assets/images/capa-video-pedra-de-roseta.jpg
 categories: [História, 5 minutos de História]
 featured: true
 date: 2020-04-27
