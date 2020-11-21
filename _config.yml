@@ -16,9 +16,10 @@ formspree: https://formspree.io/f/xrgolvjr
 # Authors
 authors:
   joao:
-    name: Joao Messias
-    display_name: Joao Messias
-    gravatar: e56154546cf4be74e393c62d1ae9f9d4
+    name: João Messias
+    display_name: João Messias
+    #gravatar: e56154546cf4be74e393c62d1ae9f9d4
+    avatar: assets/images/joao-messias.jpg
     #email:
     web: https://www.instagram.com/joao.artpoint/
     instagram: https://www.instagram.com/joao.artpoint/
