@@ -4,7 +4,7 @@ title: "Artpoint blog - Arte e História"
 description: "Sobre Arte e História"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
-baseurl: /blog.artpoint.app
+baseurl:
 #google_analytics: ''
 google_tag_manager: 'GTM-PZ74NF7'
 disqus: 'andersonmamede'
