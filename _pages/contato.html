@@ -12,7 +12,7 @@ permalink: /contato
 </div>
 <div class="row">
     <div class="col-lg-6 mt-4 mx-auto">
-        <form action="https://formspree.io/f/xrgolvjr" onsubmit="return false">
+        <form onsubmit="return false">
             <input type="hidden" name="_language" value="pt-BR">
             <div class="form-group">
                 <label for="nome">Nome:</label>
@@ -37,7 +37,9 @@ permalink: /contato
 
         var $bt_send = $('#bt-send');
 
-        $bt_send.click(function() {
+        $bt_send.click(function(event) {
+            event.preventDefault();
+
             var data = {
                 _language: 'pt-BR',
                 nome: $.trim($('#nome').val()),
@@ -63,13 +65,13 @@ permalink: /contato
             $('#nome,#email,#mensagem').prop('disabled', true);
 
             $.ajax({
-                url: "https://formspree.io/f/xrgolvjr",
+                url: '{{site.formspree}}',
                 method: 'POST',
                 dataType: 'json',
                 data: data,
             })
                 .then(() => {
-                    window.location.href = '{{site.baseurl}}/mensagem-enviada';
+                    window.location.href = '{{site.baseurl}}/contato/mensagem-enviada';
                 })
                 .catch(() => {
                     $bt_send.prop('disabled', false).val('Enviar mensagem');
