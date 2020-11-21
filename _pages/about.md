@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Sobre o Artpoint
-permalink: /sobre
+permalink: /sobre/
 ---
 
 <div class="row justify-content-between">
