@@ -257,6 +257,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bundler (= 2.1.4)
   github-pages (~> 209)
   jekyll-archives
   jekyll-feed

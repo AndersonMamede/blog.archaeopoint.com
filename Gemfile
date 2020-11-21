@@ -8,6 +8,7 @@ source "https://rubygems.org"
 #
 
 # If you have any plugins, put them here!
+gem 'bundler', '2.1.4'
 gem 'github-pages', '~> 209'
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 group :jekyll_plugins do
