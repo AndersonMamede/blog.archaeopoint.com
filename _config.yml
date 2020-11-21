@@ -1,7 +1,7 @@
 # Site
-name: "Artpoint blog"
-title: "Artpoint blog - Arte e História"
-description: "Sobre Arte e História"
+name: "Blog Artpoint"
+title: "Artpoint blog - História, Arte e Viagens"
+description: "História, Arte e Viagens"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
 baseurl:
@@ -24,7 +24,7 @@ authors:
     web: https://www.instagram.com/joao.artpoint/
     instagram: https://www.instagram.com/joao.artpoint/
     #twitter:
-    description: "Author of Artpoint."
+    description: "Apaixonado por história e arte desde sempre. Idealizador do projeto Artpoint."
 
 # Plugins
 plugins:
