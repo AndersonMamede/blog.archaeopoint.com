@@ -39,6 +39,7 @@ post_class: post-template
                         {% if author.instagram %}
                         <a target="_blank" href="{{ author.instagram }}" class="btn follow instagram">Instagram</a>
                         {% endif %}
+                        <br/>
                         <span class="author-description">{{ author.description }}</span>
                     </div>
                 </div>
@@ -103,10 +104,11 @@ post_class: post-template
             <!-- Post Categories -->
             <div class="after-post-cats">
                 <ul class="tags mb-4">
+                    <div class="mb-1">Categoria(s):</div>
                     {% assign sortedCategories = page.categories | sort %}
                     {% for category in sortedCategories %}
                     <li>
-                        <a class="smoothscroll" href="{{site.baseurl}}/categoria/{{ category | url_escape | strip | replace: ' ', '-' | downcase }}">{{ category | camelcase }} ({{ category.size }})</a>
+                        <a class="smoothscroll" href="{{site.baseurl}}/categoria/{{ category | url_escape | strip | replace: ' ', '-' | downcase }}">{{ category | camelcase }}</a>
                     </li>
                     {% endfor %}
                 </ul>
@@ -116,6 +118,7 @@ post_class: post-template
             <!-- Post Tags -->
             <div class="after-post-tags">
                 <ul class="tags">
+                    <div class="mb-1">Tag(s):</div>
                     {% assign sortedTags = page.tags | sort %}
                     {% for tag in sortedTags %}
                     <li>
