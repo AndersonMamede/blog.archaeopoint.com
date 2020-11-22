@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>/pedra-de-roseta/</loc>
+<loc>https://blog.artpoint.app/pedra-de-roseta/</loc>
 <lastmod>2020-04-27T00:00:00+00:00</lastmod>
 </url>
 <url>
-<loc>/sobre/</loc>
+<loc>https://blog.artpoint.app/sobre/</loc>
 </url>
 <url>
-<loc>/categorias/</loc>
+<loc>https://blog.artpoint.app/categorias/</loc>
 </url>
 <url>
-<loc>/contato/</loc>
+<loc>https://blog.artpoint.app/contato/</loc>
 </url>
 <url>
-<loc>/</loc>
+<loc>https://blog.artpoint.app/</loc>
 </url>
 <url>
-<loc>/tags/</loc>
+<loc>https://blog.artpoint.app/tags/</loc>
 </url>
 <url>
-<loc>/categoria/hist%C3%B3ria/</loc>
+<loc>https://blog.artpoint.app/categoria/hist%C3%B3ria/</loc>
 </url>
 <url>
-<loc>/categoria/5-minutos-de-hist%C3%B3ria/</loc>
+<loc>https://blog.artpoint.app/categoria/5-minutos-de-hist%C3%B3ria/</loc>
 </url>
 </urlset>
