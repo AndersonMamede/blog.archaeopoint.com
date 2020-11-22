@@ -33,10 +33,31 @@ var documents = [
         "body": "{{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' }}"{% assign counter = counter | plus: 1 %}
     }{% if forloop.last %}{% else %}, {% endif %}{% endfor %}];
 
+function normaliseString(str) {
+    return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+function normaliseSpelling(builder) {
+    var pipelineFunction = function (token) {
+        return token.update(function () {
+            return normaliseString(token.str);
+        });
+    }
+
+    // Register the pipeline function so the index can be serialised
+    lunr.Pipeline.registerFunction(pipelineFunction, 'normaliseSpelling');
+
+    // Add the pipeline function to both the indexing pipeline and the searching pipeline
+    builder.pipeline.before(lunr.stemmer, pipelineFunction);
+    builder.searchPipeline.before(lunr.stemmer, pipelineFunction);
+}
+
 var idx = lunr(function () {
     this.ref('id')
     this.field('title')
     this.field('body')
+
+    this.use(normaliseSpelling, ['title','body']);
 
     documents.forEach(function (doc) {
         this.add(doc)
@@ -47,7 +68,7 @@ function lunr_search(term) {
     if(term) {
         document.getElementById('lunrsearchresults').innerHTML = "<p>Resultados para '" + term + "'</p>" + document.getElementById('lunrsearchresults').innerHTML;
         //put results on the screen.
-        var results = idx.search('*'+term+'*');
+        var results = idx.search('*'+normaliseString(term)+'*');
         if(results.length>0){
             //console.log(idx.search(term));
             //if results
@@ -74,7 +95,7 @@ function lunr_search(term) {
     if(term) {
         document.getElementById('modtit').innerHTML = "<h5 class='modal-title'>Resultados para '" + term + "'</h5>" + document.getElementById('modtit').innerHTML;
         //put results on the screen.
-        var results = idx.search('*'+term+'*');
+        var results = idx.search('*'+normaliseString(term)+'*');
         if(results.length>0){
             //console.log(idx.search(term));
             //if results
