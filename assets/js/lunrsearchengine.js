@@ -4,21 +4,33 @@ sitemap: false
 ---
 
 {% assign counter = 0 %}
-var documents = [{% for page in site.pages %}{% if page.url contains '.xml' or page.url contains 'assets' or page.url contains 'category' or page.url contains 'tag' %}{% else %}{
-    "id": {{ counter }},
-    "url": "{{ site.url }}{{site.baseurl}}{{ page.url }}",
-    "title": "{{ page.title }}",
-    "body": "{{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' }}"{% assign counter = counter | plus: 1 %}
-    }, {% endif %}{% endfor %}{% for page in site.without-plugin %}{
-    "id": {{ counter }},
-    "url": "{{ site.url }}{{site.baseurl}}{{ page.url }}",
-    "title": "{{ page.title }}",
-    "body": "{{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' }}"{% assign counter = counter | plus: 1 %}
-    }, {% endfor %}{% for page in site.posts %}{
-    "id": {{ counter }},
-    "url": "{{ site.url }}{{site.baseurl}}{{ page.url }}",
-    "title": "{{ page.title }}",
-    "body": "{{ page.date | date: "%Y/%m/%d" }} - {{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' }}"{% assign counter = counter | plus: 1 %}
+{% assign search_only_post = 1 %}
+var documents = [
+    {% if search_only_post != 1 %}
+    {% for page in site.pages %}
+        {% if ignore_page or page.url contains '.xml' or page.url contains 'assets' or page.url contains 'category' or page.url contains 'tag' %}{% else %}{
+            "id": {{ counter }},
+            "url": "{{site.baseurl}}{{ page.url }}",
+            "title": "{{ page.title }}",
+            "body": "{{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' }}"{% assign counter = counter | plus: 1 %}},
+        {% endif %}
+    {% endfor %}
+    {% endif %}
+
+    {% if search_only_post != 1 %}
+    {% for page in site.without-plugin %}{
+        "id": {{ counter }},
+        "url": "{{site.baseurl}}{{ page.url }}",
+        "title": "{{ page.title }}",
+        "body": "{{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' }}"{% assign counter = counter | plus: 1 %}
+    }, {% endfor %}
+    {% endif %}
+
+    {% for page in site.posts %}{
+        "id": {{ counter }},
+        "url": "{{site.baseurl}}{{ page.url }}",
+        "title": "{{ page.title }}",
+        "body": "{{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' }}"{% assign counter = counter | plus: 1 %}
     }{% if forloop.last %}{% else %}, {% endif %}{% endfor %}];
 
 var idx = lunr(function () {
@@ -45,7 +57,7 @@ function lunr_search(term) {
                 var url = documents[ref]['url'];
                 var title = documents[ref]['title'];
                 var body = documents[ref]['body'].substring(0,160)+'...';
-                document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML + "<li class='lunrsearchresult'><a href='" + url + "'><span class='title'>" + title + "</span><br /><span class='body'>"+ body +"</span><br /><span class='url'>"+ url +"</span></a></li>";
+                document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML + "<li class='lunrsearchresult'><a href='" + url + "'><span class='title'>" + title + "</span><br /><span class='body'>"+ body +"</span><br /><br /></a></li>";
             }
         } else {
             document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = "<li class='lunrsearchresult'>Nenhum resultado encontrado...</li>";
@@ -72,7 +84,7 @@ function lunr_search(term) {
                 var url = documents[ref]['url'];
                 var title = documents[ref]['title'];
                 var body = documents[ref]['body'].substring(0,160)+'...';
-                document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML + "<li class='lunrsearchresult'><a href='" + url + "'><span class='title'>" + title + "</span><br /><small><span class='body'>"+ body +"</span><br /><span class='url'>"+ url +"</span></small></a></li>";
+                document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML + "<li class='lunrsearchresult'><a href='" + url + "'><span class='title'>" + title + "</span><br /><small><span class='body'>"+ body +"</span><br /><br /></small></a></li>";
             }
         } else {
             document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = "<li class='lunrsearchresult'>Desculpe, nenhum resultado foi encontrado. Feche e tente com outro termo!</li>";
