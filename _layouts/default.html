@@ -36,7 +36,6 @@ ga('send', 'pageview');
 {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
 <body class="{{layout}}">
     {% include gtm_body.html %}
-    {% include fb_sdk.html %}
 
 	<!-- defer loading of font and font awesome -->
 	<noscript id="deferred-styles">
