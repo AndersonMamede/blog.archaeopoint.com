@@ -3,7 +3,7 @@ layout: post
 title: "Campo de concentração de Sachsenhausen - Nazismo"
 author: joao
 image: assets/images/campo-concentracao-sachsenhausen-nazismo.jpg
-categories: [História]
+categories: [História, Viagem ao passado]
 featured: true
 date: 2020-10-15
 ---
