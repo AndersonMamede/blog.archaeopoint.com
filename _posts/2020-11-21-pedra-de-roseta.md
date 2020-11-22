@@ -8,10 +8,11 @@ featured: true
 date: 2020-04-27
 ---
 
-A série _5 minutos de história_ de hoje está imperdível! Vamos falar sobre um tesouro deixado pela civilização
-egípcia: a <strong>Pedra de Roseta</strong>. Embarque nessa viagem ao passado e descubra o porquê esse tesouro é tão
-valioso para a nossa civilização. Você verá que nem todo tesouro é formado por pedras preciosas e que existem artefatos
-que são muito valiosos por seus valores históricos e emocionais.
+Esse capítulo da série _[5 minutos de história]({{site.baseurl}}/categoria/5-minutos-de-historia/){:target="_blank"}_
+está imperdível! Vamos falar sobre um tesouro deixado pela civilização egípcia: a <strong>Pedra de Roseta</strong>.
+Embarque nessa viagem ao passado e descubra o porquê esse tesouro é tão valioso para a nossa civilização. Você verá que
+nem todo tesouro é formado por pedras preciosas e que existem artefatos que são muito valiosos por seus valores
+históricos e emocionais.
 
 Assista abaixo ao episódio <strong>Pedra de Roseta</strong> da série _5 minutos de História_:
 
