@@ -5,6 +5,7 @@ description: "História, Arte e Viagens"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
 baseurl:
+url: https://blog.artpoint.app # for sitemap?
 google_tag_manager: 'GTM-PZ74NF7'
 disqus: 'artpoint'
 instagram: https://www.instagram.com/joao.artpoint/
