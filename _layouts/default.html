@@ -79,7 +79,7 @@ ga('send', 'pageview');
                 </li>
 
                 <li class="nav-item">
-                <a class="nav-link" href="{{ site.baseurl }}/categoria/história/">História</a>
+                <a class="nav-link" href="{{ site.baseurl }}/categoria/historia/">História</a>
                 </li>
 
                 <li class="nav-item">
@@ -164,11 +164,11 @@ ga('send', 'pageview');
             {% assign categories_list = site.categories %}
             {% if categories_list.first[0] == null %}
                 {% for category in categories_list %}
-                    <a class="mt-1 mb-1" href="{{site.baseurl}}/categoria/{{ category | url_escape | strip | replace: ' ', '-' | downcase }}">{{ category | camelcase }} ({{ site.tags[category].size }})</a>
+                    <a class="mt-1 mb-1" href="{{site.baseurl}}/categoria/{{ category | slugify: "latin" }}/">{{ category | camelcase }} ({{ site.tags[category].size }})</a>
                 {% endfor %}
             {% else %}
                 {% for category in categories_list %}
-                    <a class="mt-1 mb-1" href="{{site.baseurl}}/categoria/{{ category[0] | url_escape | strip | replace: ' ', '-' | downcase }}">{{ category[0] | camelcase }} ({{ category[1].size }})</a>
+                    <a class="mt-1 mb-1" href="{{site.baseurl}}/categoria/{{ category[0] | slugify: "latin" }}/">{{ category[0] | camelcase }} ({{ category[1].size }})</a>
                 {% endfor %}
             {% endif %}
             {% assign categories_list = nil %}

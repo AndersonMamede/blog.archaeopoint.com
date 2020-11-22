@@ -39,6 +39,7 @@ plugins:
 jekyll-archives:
   enabled:
     - categories
+  slug_mode: latin
   layout: archive
   permalinks:
     category: '/categoria/:name/'

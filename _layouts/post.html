@@ -108,7 +108,7 @@ post_class: post-template
                     {% assign sortedCategories = page.categories | sort %}
                     {% for category in sortedCategories %}
                     <li>
-                        <a class="smoothscroll" href="{{site.baseurl}}/categoria/{{ category | url_escape | strip | replace: ' ', '-' | downcase }}">{{ category | camelcase }}</a>
+                        <a class="smoothscroll" href="{{site.baseurl}}/categoria/{{ category | slugify: "latin" }}/">{{ category | camelcase }}</a>
                     </li>
                     {% endfor %}
                 </ul>
