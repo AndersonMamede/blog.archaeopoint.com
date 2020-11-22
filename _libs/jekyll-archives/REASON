@@ -1,0 +1,1 @@
+Reason for this custom lib: use slug_mode, which was not available on latest release yet (2.2.1), only on GitHub
