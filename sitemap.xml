@@ -1,28 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>/options-for-creating-new-site-with-jekyll/</loc>
-<lastmod>2018-01-12T00:00:00+00:00</lastmod>
-</url>
-<url>
-<loc>/red-riding/</loc>
-<lastmod>2018-01-12T00:00:00+00:00</lastmod>
-</url>
-<url>
-<loc>/acumulated-experience/</loc>
-<lastmod>2018-06-12T00:00:00+00:00</lastmod>
-</url>
-<url>
-<loc>/powerful-things-markdown-editor/</loc>
-<lastmod>2018-06-12T00:00:00+00:00</lastmod>
-</url>
-<url>
 <loc>/pedra-de-roseta/</loc>
 <lastmod>2020-04-27T00:00:00+00:00</lastmod>
-</url>
-<url>
-<loc>/nazismo-campo-concentracao-sachsenhausen/</loc>
-<lastmod>2020-10-15T00:00:00+00:00</lastmod>
 </url>
 <url>
 <loc>/sobre/</loc>
@@ -43,16 +23,7 @@
 <loc>/tags/</loc>
 </url>
 <url>
-<loc>/categoria/jekyll/</loc>
-</url>
-<url>
-<loc>/categoria/tutorial/</loc>
-</url>
-<url>
 <loc>/categoria/hist%C3%B3ria/</loc>
-</url>
-<url>
-<loc>/categoria/arte/</loc>
 </url>
 <url>
 <loc>/categoria/5-minutos-de-hist%C3%B3ria/</loc>
