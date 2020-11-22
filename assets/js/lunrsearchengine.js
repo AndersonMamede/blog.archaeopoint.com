@@ -47,7 +47,7 @@ function lunr_search(term) {
     if(term) {
         document.getElementById('lunrsearchresults').innerHTML = "<p>Resultados para '" + term + "'</p>" + document.getElementById('lunrsearchresults').innerHTML;
         //put results on the screen.
-        var results = idx.search(term);
+        var results = idx.search('*'+term+'*');
         if(results.length>0){
             //console.log(idx.search(term));
             //if results
@@ -74,7 +74,7 @@ function lunr_search(term) {
     if(term) {
         document.getElementById('modtit').innerHTML = "<h5 class='modal-title'>Resultados para '" + term + "'</h5>" + document.getElementById('modtit').innerHTML;
         //put results on the screen.
-        var results = idx.search(term);
+        var results = idx.search('*'+term+'*');
         if(results.length>0){
             //console.log(idx.search(term));
             //if results
