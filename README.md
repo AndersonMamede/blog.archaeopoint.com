@@ -1,4 +1,4 @@
-https://blog.archaeopoint.app
+https://blog.archaeopoint.com
 
 template: Mediumish Jekyll Theme v1.0.36
 
