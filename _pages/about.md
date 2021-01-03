@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Sobre o Artpoint
+title: Sobre o ArchaeoPoint
 permalink: /sobre/
 ---
 

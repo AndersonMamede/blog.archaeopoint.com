@@ -1,14 +1,14 @@
 # Site
-name: "Blog Artpoint"
-title: "Artpoint blog - História, Arte e Viagens"
-description: "História, Arte e Viagens"
+name: "Blog ArchaeoPoint"
+title: "ArchaeoPoint blog - História, Arte, Viagens, etc"
+description: "História, Arte, Viagens, etc"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
 baseurl:
-url: https://blog.artpoint.app # for sitemap?
+url: https://blog.archaeopoint.com # for sitemap?
 google_tag_manager: 'GTM-PZ74NF7'
-disqus: 'artpoint'
-instagram: https://www.instagram.com/joao.artpoint/
+disqus: 'archaeopoint'
+instagram: https://www.instagram.com/joao.archaeopoint/
 #mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 include: ["_pages"]
 permalink: /:title/
@@ -22,10 +22,10 @@ authors:
     #gravatar: e56154546cf4be74e393c62d1ae9f9d4
     avatar: assets/images/joao-messias.jpg
     #email:
-    web: https://www.instagram.com/joao.artpoint/
-    instagram: https://www.instagram.com/joao.artpoint/
+    web: https://www.instagram.com/joao.archaeopoint/
+    instagram: https://www.instagram.com/joao.archaeopoint/
     #twitter:
-    description: "Apaixonado por história e arte desde sempre. Idealizador do projeto Artpoint."
+    description: "Apaixonado por história e arte desde sempre. Idealizador do projeto ArchaeoPoint."
 
 # Plugins
 plugins:
@@ -44,7 +44,7 @@ jekyll-archives:
   permalinks:
     category: '/categoria/:name/'
 
-# Pagination 
+# Pagination
 paginate: 9
 paginate_path: /pagina/:num/
 
