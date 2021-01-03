@@ -1,4 +1,6 @@
-https://blog.artpoint.app
+https://blog.archaeopoint.app
+
+template: Mediumish Jekyll Theme v1.0.36
 
 ### Deploy
 - Push to `master`
